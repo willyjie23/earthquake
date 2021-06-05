@@ -1,4 +1,12 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 
-createApp(App).mount('#app')
+import axios from 'axios';
+import VueAxios from 'vue-axios';
+import { setInterval, clearInterval } from 'timers'
+
+const vm = createApp(App)
+
+vm.use(VueAxios, axios, setInterval, clearInterval)
+vm.mount('#app');
+
