@@ -23,7 +23,7 @@ export default {
       self.$http.get(api).then(function (response) {
         self.result = response.data.records.earthquake[0].reportContent;
       });
-    }, 10000)
+    }, 3000)
   },
 }
 </script>
